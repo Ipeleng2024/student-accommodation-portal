@@ -1,0 +1,149 @@
+{
+  "properties": [
+    {
+      "id": "prop-1",
+      "name": "Sunbird House",
+      "area": "Pretoria North",
+      "address": "Replace with real street address",
+      "description": "Secure student residence within walking distance of campus shuttle stops. Shared kitchen, study lounge, fibre wifi included.",
+      "amenities": [
+        "Fibre wifi",
+        "24/7 access control",
+        "Shared kitchen",
+        "Study lounge",
+        "Laundry on-site",
+        "Backup power"
+      ],
+      "rooms": [
+        {
+          "id": "SB-01",
+          "floor": 1,
+          "type": "Single",
+          "priceMonthly": 4500,
+          "status": "available"
+        },
+        {
+          "id": "SB-02",
+          "floor": 1,
+          "type": "Single",
+          "priceMonthly": 4500,
+          "status": "occupied"
+        },
+        {
+          "id": "SB-03",
+          "floor": 1,
+          "type": "Shared",
+          "priceMonthly": 3200,
+          "status": "occupied"
+        },
+        {
+          "id": "SB-04",
+          "floor": 1,
+          "type": "Shared",
+          "priceMonthly": 3200,
+          "status": "available"
+        },
+        {
+          "id": "SB-05",
+          "floor": 2,
+          "type": "Single",
+          "priceMonthly": 4500,
+          "status": "occupied"
+        },
+        {
+          "id": "SB-06",
+          "floor": 2,
+          "type": "Single",
+          "priceMonthly": 4500,
+          "status": "occupied"
+        },
+        {
+          "id": "SB-07",
+          "floor": 2,
+          "type": "Shared",
+          "priceMonthly": 3200,
+          "status": "available"
+        },
+        {
+          "id": "SB-08",
+          "floor": 2,
+          "type": "Shared",
+          "priceMonthly": 3200,
+          "status": "occupied"
+        }
+      ]
+    },
+    {
+      "id": "prop-2",
+      "name": "Berg House",
+      "area": "Pretoria North",
+      "address": "Replace with real street address",
+      "description": "Quiet residence with a focus on study-friendly living. Close to public transport routes.",
+      "amenities": [
+        "Fibre wifi",
+        "24/7 access control",
+        "Shared kitchen",
+        "Study lounge",
+        "Laundry on-site"
+      ],
+      "rooms": [
+        {
+          "id": "BG-01",
+          "floor": 1,
+          "type": "Single",
+          "priceMonthly": 4500,
+          "status": "occupied"
+        },
+        {
+          "id": "BG-02",
+          "floor": 1,
+          "type": "Single",
+          "priceMonthly": 4500,
+          "status": "occupied"
+        },
+        {
+          "id": "BG-03",
+          "floor": 1,
+          "type": "Shared",
+          "priceMonthly": 3200,
+          "status": "occupied"
+        },
+        {
+          "id": "BG-04",
+          "floor": 1,
+          "type": "Shared",
+          "priceMonthly": 3200,
+          "status": "occupied"
+        },
+        {
+          "id": "BG-05",
+          "floor": 2,
+          "type": "Single",
+          "priceMonthly": 4500,
+          "status": "available"
+        },
+        {
+          "id": "BG-06",
+          "floor": 2,
+          "type": "Single",
+          "priceMonthly": 4500,
+          "status": "occupied"
+        },
+        {
+          "id": "BG-07",
+          "floor": 2,
+          "type": "Shared",
+          "priceMonthly": 3200,
+          "status": "occupied"
+        },
+        {
+          "id": "BG-08",
+          "floor": 2,
+          "type": "Shared",
+          "priceMonthly": 3200,
+          "status": "available"
+        }
+      ]
+    }
+  ]
+}

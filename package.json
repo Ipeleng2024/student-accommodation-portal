@@ -1,0 +1,15 @@
+{
+  "name": "student-accommodation-portal",
+  "version": "0.1.0",
+  "description": "Student accommodation platform - public listings, tenant portal, and management dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^4.19.2",
+    "express-session": "^1.19.0"
+  }
+}

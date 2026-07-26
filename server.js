@@ -3,6 +3,8 @@ const path = require('path');
 const session = require('express-session');
 const publicRoutes = require('./routes/public');
 const managerRoutes = require('./routes/manager');
+const tenantRoutes = require('./routes/tenant');
+const chatbotRoutes = require('./routes/chatbot');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -19,6 +21,8 @@ app.use(
 
 app.use('/api/public', publicRoutes);
 app.use('/api/manager', managerRoutes);
+app.use('/api/tenant', tenantRoutes);
+app.use('/api/chatbot', chatbotRoutes);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {

@@ -29,6 +29,55 @@
     <div class="stat-row" id="stat-row"></div>
 
     <div id="properties-dash"></div>
+
+    <section style="margin-top:48px;">
+      <div class="dash-header">
+        <h2 style="font-family:var(--font-display); font-size:22px; margin:0;">Tenants</h2>
+        <button class="btn-quiet" id="add-tenant-btn">+ Add tenant</button>
+      </div>
+
+      <div id="add-tenant-form" style="display:none; border:1px solid var(--line); border-radius:6px; padding:20px; margin-bottom:20px; background:white;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+          <input type="text" id="new-name" placeholder="Full name" style="padding:9px 10px; border:1px solid var(--line); border-radius:4px; font-family:var(--font-body); font-size:13px;" />
+          <input type="email" id="new-email" placeholder="Email" style="padding:9px 10px; border:1px solid var(--line); border-radius:4px; font-family:var(--font-body); font-size:13px;" />
+          <input type="password" id="new-password" placeholder="Temporary password" style="padding:9px 10px; border:1px solid var(--line); border-radius:4px; font-family:var(--font-body); font-size:13px;" />
+          <select id="new-room" style="padding:9px 10px; border:1px solid var(--line); border-radius:4px; font-family:var(--font-body); font-size:13px;"></select>
+        </div>
+        <button class="btn-quiet" id="submit-tenant-btn" style="background:var(--ink); color:var(--paper); border:none;">Create tenant</button>
+        <p id="add-tenant-error" style="color:var(--rust); font-size:13px; display:none; margin-top:10px;"></p>
+      </div>
+
+      <table class="rooms-table" id="tenants-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Property / Room</th>
+            <th>Status</th>
+            <th>Balance due</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tenants-tbody"></tbody>
+      </table>
+    </section>
+
+    <section style="margin-top:48px;">
+      <div class="dash-header">
+        <h2 style="font-family:var(--font-display); font-size:22px; margin:0;">Complaints &amp; queries</h2>
+      </div>
+      <table class="rooms-table">
+        <thead>
+          <tr>
+            <th>From</th>
+            <th>Message</th>
+            <th>Filed</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="complaints-tbody"></tbody>
+      </table>
+    </section>
   </main>
 
   <script src="/js/manager-dashboard.js"></script>

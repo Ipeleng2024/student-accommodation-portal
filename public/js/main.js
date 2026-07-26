@@ -1,3 +1,8 @@
+function placeholderImage(roomId) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56"><rect width="56" height="56" fill="%23EDEAE3"/><text x="28" y="32" font-family="monospace" font-size="10" fill="%236B7A63" text-anchor="middle">${roomId}</text></svg>`;
+  return `data:image/svg+xml,${svg}`;
+}
+
 async function loadSummary() {
   const res = await fetch('/api/public/summary');
   const data = await res.json();
@@ -45,6 +50,7 @@ async function loadProperties() {
       <table class="rooms-table">
         <thead>
           <tr>
+            <th>Photo</th>
             <th>Room</th>
             <th>Floor</th>
             <th>Type</th>
@@ -57,6 +63,7 @@ async function loadProperties() {
             .map(
               (r) => `
             <tr>
+              <td><img class="room-photo" src="/${r.image}" alt="${r.id}" onerror="this.src='${placeholderImage(r.id)}'" /></td>
               <td>${r.id}</td>
               <td>${r.floor}</td>
               <td>${r.type}</td>

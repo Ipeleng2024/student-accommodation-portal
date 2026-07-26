@@ -1,0 +1,16 @@
+{
+  "tenants": [
+    {
+      "id": "ten-1",
+      "name": "Sample Tenant",
+      "email": "tenant@example.com",
+      "passwordHash": "$2b$10$IkiEXNJbkNOVshQBbZvG4Oh33UuS7zhBuYHZl97wjpPg4ECRnGnq6",
+      "propertyId": "prop-1",
+      "roomId": "SB-02",
+      "accountStatus": "up_to_date",
+      "balanceDue": 0,
+      "note": "",
+      "lastUpdated": "2026-07-01"
+    }
+  ]
+}

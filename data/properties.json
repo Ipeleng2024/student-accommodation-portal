@@ -20,56 +20,64 @@
           "floor": 1,
           "type": "Single",
           "priceMonthly": 4500,
-          "status": "available"
+          "status": "available",
+          "image": "images/rooms/SB-01.jpg"
         },
         {
           "id": "SB-02",
           "floor": 1,
           "type": "Single",
           "priceMonthly": 4500,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/SB-02.jpg"
         },
         {
           "id": "SB-03",
           "floor": 1,
           "type": "Shared",
           "priceMonthly": 3200,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/SB-03.jpg"
         },
         {
           "id": "SB-04",
           "floor": 1,
           "type": "Shared",
           "priceMonthly": 3200,
-          "status": "available"
+          "status": "available",
+          "image": "images/rooms/SB-04.jpg"
         },
         {
           "id": "SB-05",
           "floor": 2,
           "type": "Single",
           "priceMonthly": 4500,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/SB-05.jpg"
         },
         {
           "id": "SB-06",
           "floor": 2,
           "type": "Single",
           "priceMonthly": 4500,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/SB-06.jpg"
         },
         {
           "id": "SB-07",
           "floor": 2,
           "type": "Shared",
           "priceMonthly": 3200,
-          "status": "available"
+          "status": "available",
+          "image": "images/rooms/SB-07.jpg"
         },
         {
           "id": "SB-08",
           "floor": 2,
           "type": "Shared",
           "priceMonthly": 3200,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/SB-08.jpg"
         }
       ]
     },
@@ -92,56 +100,64 @@
           "floor": 1,
           "type": "Single",
           "priceMonthly": 4500,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/BG-01.jpg"
         },
         {
           "id": "BG-02",
           "floor": 1,
           "type": "Single",
           "priceMonthly": 4500,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/BG-02.jpg"
         },
         {
           "id": "BG-03",
           "floor": 1,
           "type": "Shared",
           "priceMonthly": 3200,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/BG-03.jpg"
         },
         {
           "id": "BG-04",
           "floor": 1,
           "type": "Shared",
           "priceMonthly": 3200,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/BG-04.jpg"
         },
         {
           "id": "BG-05",
           "floor": 2,
           "type": "Single",
           "priceMonthly": 4500,
-          "status": "available"
+          "status": "available",
+          "image": "images/rooms/BG-05.jpg"
         },
         {
           "id": "BG-06",
           "floor": 2,
           "type": "Single",
           "priceMonthly": 4500,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/BG-06.jpg"
         },
         {
           "id": "BG-07",
           "floor": 2,
           "type": "Shared",
           "priceMonthly": 3200,
-          "status": "occupied"
+          "status": "occupied",
+          "image": "images/rooms/BG-07.jpg"
         },
         {
           "id": "BG-08",
           "floor": 2,
           "type": "Shared",
           "priceMonthly": 3200,
-          "status": "available"
+          "status": "available",
+          "image": "images/rooms/BG-08.jpg"
         }
       ]
     }

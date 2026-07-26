@@ -1,14 +1,14 @@
-/* ===== Tokens ===== */
+﻿/* ===== Tokens ===== */
 :root {
-  --ink: #1B2430;
-  --ink-soft: #2E3A4C;
-  --paper: #F7F5F1;
-  --paper-dim: #EDEAE3;
-  --brass: #C08A2E;
-  --brass-soft: #E4C382;
-  --sage: #6B7A63;
-  --rust: #8A3B2C;
-  --line: rgba(27, 36, 48, 0.12);
+  --ink: #1E2A3E;
+  --ink-soft: #48566B;
+  --paper: #FFFFFF;
+  --paper-dim: #EDF1F5;
+  --brass: #2F6FED;
+  --brass-soft: #BFD6FB;
+  --sage: #6B7280;
+  --rust: #A13B34;
+  --line: rgba(30, 42, 62, 0.12);
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
@@ -28,7 +28,6 @@ html, body {
 
 a { color: inherit; }
 
-/* ===== Header ===== */
 header.site-header {
   display: flex;
   justify-content: space-between;
@@ -54,7 +53,6 @@ nav.site-nav a {
 }
 nav.site-nav a:hover { border-color: var(--brass); }
 
-/* ===== Hero / Room Board ===== */
 .hero {
   padding: 56px 48px 40px;
   border-bottom: 1px solid var(--line);
@@ -149,7 +147,6 @@ nav.site-nav a:hover { border-color: var(--brass); }
 .swatch.available { background: var(--brass); }
 .swatch.occupied { background: var(--ink); opacity: 0.55; }
 
-/* ===== Properties ===== */
 main { padding: 48px; max-width: 1080px; margin: 0 auto; }
 
 .property {
@@ -233,11 +230,11 @@ main { padding: 48px; max-width: 1080px; margin: 0 auto; }
   display: inline-block;
 }
 .status-pill.available {
-  background: rgba(192, 138, 46, 0.16);
-  color: #8A6116;
+  background: rgba(47, 111, 237, 0.14);
+  color: #1D4FB8;
 }
 .status-pill.occupied {
-  background: rgba(27, 36, 48, 0.08);
+  background: rgba(30, 42, 62, 0.08);
   color: var(--ink-soft);
 }
 
@@ -256,7 +253,6 @@ footer {
   .board-stats { gap: 20px; }
 }
 
-/* ===== Manager dashboard ===== */
 .dash-header {
   display: flex;
   justify-content: space-between;
@@ -380,7 +376,6 @@ footer {
   margin-top: 8px;
 }
 
-/* ===== Tenant statement ===== */
 .statement-card {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -398,11 +393,11 @@ footer {
   margin-bottom: 24px;
 }
 .status-badge-lg.up_to_date {
-  background: rgba(107, 122, 99, 0.15);
+  background: rgba(107, 114, 128, 0.15);
   color: var(--sage);
 }
 .status-badge-lg.behind {
-  background: rgba(138, 59, 44, 0.12);
+  background: rgba(161, 59, 52, 0.12);
   color: var(--rust);
 }
 
@@ -423,7 +418,6 @@ footer {
   margin: 4px 0 20px;
 }
 
-/* ===== Room photo ===== */
 .room-photo {
   width: 56px;
   height: 56px;
@@ -433,7 +427,6 @@ footer {
   display: block;
 }
 
-/* ===== Chatbot widget ===== */
 #chatbot-toggle {
   position: fixed;
   bottom: 24px;
@@ -447,7 +440,7 @@ footer {
   font-family: var(--font-display);
   font-size: 22px;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(27, 36, 48, 0.25);
+  box-shadow: 0 4px 14px rgba(30, 42, 62, 0.25);
   z-index: 1000;
 }
 
@@ -460,7 +453,7 @@ footer {
   background: white;
   border: 1px solid var(--line);
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(27, 36, 48, 0.2);
+  box-shadow: 0 10px 30px rgba(30, 42, 62, 0.2);
   display: none;
   flex-direction: column;
   z-index: 1000;
@@ -526,7 +519,6 @@ footer {
   cursor: pointer;
 }
 
-/* ===== Complaints panel (manager dashboard) ===== */
 .complaint-row.resolved { opacity: 0.55; }
 .complaint-msg { max-width: 320px; }
 

@@ -1,4 +1,4 @@
-function money(n) {
+﻿function money(n) {
   return `R${n.toLocaleString()}`;
 }
 

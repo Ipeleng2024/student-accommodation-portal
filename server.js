@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const path = require('path');
 const session = require('express-session');
 const publicRoutes = require('./routes/public');
@@ -15,7 +15,7 @@ app.use(
     secret: 'change-this-secret-before-deploying-anywhere-public',
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 1000 * 60 * 60 * 8 } // 8 hour session
+    cookie: { maxAge: 1000 * 60 * 60 * 8 }
   })
 );
 
@@ -30,5 +30,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Student accommodation portal running at http://localhost:${PORT}`);
+  console.log('Student accommodation portal running at http://localhost:' + PORT);
 });

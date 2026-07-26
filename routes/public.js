@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
@@ -10,13 +10,11 @@ function loadProperties() {
   return JSON.parse(raw).properties;
 }
 
-// GET /api/public/properties - full listing with rooms
 router.get('/properties', (req, res) => {
   const properties = loadProperties();
   res.json({ properties });
 });
 
-// GET /api/public/summary - counts for the room board (hero)
 router.get('/summary', (req, res) => {
   const properties = loadProperties();
   const board = properties.map((p) => ({

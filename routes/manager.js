@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
@@ -28,13 +28,11 @@ function saveTenants(tenants) {
   fs.writeFileSync(TENANTS_PATH, JSON.stringify({ tenants }, null, 2));
 }
 
-// Middleware: block anything below this unless logged in as manager
 function requireManager(req, res, next) {
   if (req.session && req.session.managerId) return next();
   return res.status(401).json({ error: 'Not logged in' });
 }
 
-// POST /api/manager/login
 router.post('/login', (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
@@ -53,12 +51,10 @@ router.post('/login', (req, res) => {
   res.json({ name: manager.name, email: manager.email });
 });
 
-// POST /api/manager/logout
 router.post('/logout', (req, res) => {
   req.session.destroy(() => res.json({ ok: true }));
 });
 
-// GET /api/manager/session - check if logged in (used by dashboard page on load)
 router.get('/session', (req, res) => {
   if (req.session && req.session.managerId) {
     return res.json({ loggedIn: true, name: req.session.managerName });
@@ -66,7 +62,6 @@ router.get('/session', (req, res) => {
   res.json({ loggedIn: false });
 });
 
-// GET /api/manager/dashboard - occupancy analytics (protected)
 router.get('/dashboard', requireManager, (req, res) => {
   const properties = loadProperties();
 
@@ -108,12 +103,11 @@ router.get('/dashboard', requireManager, (req, res) => {
   res.json({ totals, properties: propertyStats });
 });
 
-// PATCH /api/manager/rooms/:propertyId/:roomId - manually toggle room status (protected)
 router.patch('/rooms/:propertyId/:roomId', requireManager, (req, res) => {
   const { propertyId, roomId } = req.params;
-  const { status } = req.body;
+  const { status, type, priceMonthly } = req.body;
 
-  if (!['available', 'occupied'].includes(status)) {
+  if (status !== undefined && !['available', 'occupied'].includes(status)) {
     return res.status(400).json({ error: 'status must be "available" or "occupied"' });
   }
 
@@ -124,13 +118,15 @@ router.patch('/rooms/:propertyId/:roomId', requireManager, (req, res) => {
   const room = property.rooms.find((r) => r.id === roomId);
   if (!room) return res.status(404).json({ error: 'Room not found' });
 
-  room.status = status;
+  if (status !== undefined) room.status = status;
+  if (type !== undefined && type.trim()) room.type = type.trim();
+  if (priceMonthly !== undefined && !isNaN(Number(priceMonthly))) room.priceMonthly = Number(priceMonthly);
+
   saveProperties(properties);
 
   res.json({ ok: true, room });
 });
 
-// GET /api/manager/tenants - list all tenants with room/property joined (protected)
 router.get('/tenants', requireManager, (req, res) => {
   const tenants = loadTenants();
   const properties = loadProperties();
@@ -156,7 +152,6 @@ router.get('/tenants', requireManager, (req, res) => {
   res.json({ tenants: enriched });
 });
 
-// POST /api/manager/tenants - create a tenant account (protected)
 router.post('/tenants', requireManager, (req, res) => {
   const { name, email, password, propertyId, roomId } = req.body;
 
@@ -176,7 +171,7 @@ router.post('/tenants', requireManager, (req, res) => {
   if (!room) return res.status(404).json({ error: 'Room not found' });
 
   const newTenant = {
-    id: `ten-${Date.now()}`,
+    id: 'ten-' + Date.now(),
     name,
     email,
     passwordHash: bcrypt.hashSync(password, 10),
@@ -191,7 +186,6 @@ router.post('/tenants', requireManager, (req, res) => {
   tenants.push(newTenant);
   saveTenants(tenants);
 
-  // Room now has a tenant, mark it occupied if it wasn't already
   if (room.status !== 'occupied') {
     room.status = 'occupied';
     saveProperties(properties);
@@ -200,7 +194,6 @@ router.post('/tenants', requireManager, (req, res) => {
   res.status(201).json({ ok: true, id: newTenant.id });
 });
 
-// PATCH /api/manager/tenants/:id - update account status / balance / note (protected)
 router.patch('/tenants/:id', requireManager, (req, res) => {
   const { accountStatus, balanceDue, note } = req.body;
 
@@ -221,7 +214,6 @@ router.patch('/tenants/:id', requireManager, (req, res) => {
   res.json({ ok: true, tenant });
 });
 
-// DELETE /api/manager/tenants/:id - remove a tenant account (protected)
 router.delete('/tenants/:id', requireManager, (req, res) => {
   const tenants = loadTenants();
   const tenant = tenants.find((t) => t.id === req.params.id);
@@ -242,13 +234,11 @@ function saveComplaints(complaints) {
   fs.writeFileSync(p, JSON.stringify({ complaints }, null, 2));
 }
 
-// GET /api/manager/complaints (protected)
 router.get('/complaints', requireManager, (req, res) => {
   const complaints = loadComplaints().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   res.json({ complaints });
 });
 
-// PATCH /api/manager/complaints/:id (protected) - mark resolved/open
 router.patch('/complaints/:id', requireManager, (req, res) => {
   const { status } = req.body;
   if (!['open', 'resolved'].includes(status)) {

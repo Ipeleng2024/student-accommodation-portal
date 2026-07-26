@@ -1,5 +1,5 @@
-function placeholderImage(roomId) {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56"><rect width="56" height="56" fill="%23EDEAE3"/><text x="28" y="32" font-family="monospace" font-size="10" fill="%236B7A63" text-anchor="middle">${roomId}</text></svg>`;
+﻿function placeholderImage(roomId) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56"><rect width="56" height="56" fill="%23EDF1F5"/><text x="28" y="32" font-family="monospace" font-size="10" fill="%236B7280" text-anchor="middle">${roomId}</text></svg>`;
   return `data:image/svg+xml,${svg}`;
 }
 
@@ -18,7 +18,7 @@ async function loadSummary() {
       const tile = document.createElement('a');
       tile.href = `#${property.id}`;
       tile.className = `room-tile ${room.status}`;
-      tile.title = `${property.name} · ${room.id} · ${room.status}`;
+      tile.title = `${property.name} - ${room.id} - ${room.status}`;
       tile.textContent = room.id.split('-')[1] || room.id;
       board.appendChild(tile);
     });
@@ -41,7 +41,7 @@ async function loadProperties() {
     section.innerHTML = `
       <div class="property-head">
         <h2>${property.name}</h2>
-        <span class="property-area">${property.area} · ${availableCount} open</span>
+        <span class="property-area">${property.area} - ${availableCount} open</span>
       </div>
       <p class="property-desc">${property.description}</p>
       <ul class="amenities">
@@ -52,7 +52,6 @@ async function loadProperties() {
           <tr>
             <th>Photo</th>
             <th>Room</th>
-            <th>Floor</th>
             <th>Type</th>
             <th>Price / month</th>
             <th>Status</th>
@@ -65,7 +64,6 @@ async function loadProperties() {
             <tr>
               <td><img class="room-photo" src="/${r.image}" alt="${r.id}" onerror="this.src='${placeholderImage(r.id)}'" /></td>
               <td>${r.id}</td>
-              <td>${r.floor}</td>
               <td>${r.type}</td>
               <td>R${r.priceMonthly.toLocaleString()}</td>
               <td><span class="status-pill ${r.status}">${r.status}</span></td>

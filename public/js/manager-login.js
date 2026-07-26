@@ -1,4 +1,4 @@
-const form = document.getElementById('login-form');
+﻿const form = document.getElementById('login-form');
 const errorMsg = document.getElementById('error-msg');
 
 form.addEventListener('submit', async (e) => {

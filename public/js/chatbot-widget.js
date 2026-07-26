@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   const toggle = document.createElement('button');
   toggle.id = 'chatbot-toggle';
   toggle.textContent = '💬';

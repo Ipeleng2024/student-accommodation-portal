@@ -3,9 +3,9 @@
     {
       "id": "prop-1",
       "name": "Sunbird House",
-      "area": "Pretoria North",
-      "address": "Replace with real street address",
-      "description": "Secure student residence within walking distance of campus shuttle stops. Shared kitchen, study lounge, fibre wifi included.",
+      "area": "Akasia",
+      "address": "92 Sunbird Avenue, Ninapark, Akasia, 0156",
+      "description": "Premium student accommodation just 600m from Belgium Campus iTversity.",
       "amenities": [
         "Fibre wifi",
         "24/7 access control",
@@ -17,15 +17,13 @@
       "rooms": [
         {
           "id": "SB-01",
-          "floor": 1,
           "type": "Single",
           "priceMonthly": 4500,
-          "status": "available",
+          "status": "occupied",
           "image": "images/rooms/SB-01.jpg"
         },
         {
           "id": "SB-02",
-          "floor": 1,
           "type": "Single",
           "priceMonthly": 4500,
           "status": "occupied",
@@ -33,7 +31,6 @@
         },
         {
           "id": "SB-03",
-          "floor": 1,
           "type": "Shared",
           "priceMonthly": 3200,
           "status": "occupied",
@@ -41,15 +38,13 @@
         },
         {
           "id": "SB-04",
-          "floor": 1,
           "type": "Shared",
           "priceMonthly": 3200,
-          "status": "available",
+          "status": "occupied",
           "image": "images/rooms/SB-04.jpg"
         },
         {
           "id": "SB-05",
-          "floor": 2,
           "type": "Single",
           "priceMonthly": 4500,
           "status": "occupied",
@@ -57,7 +52,6 @@
         },
         {
           "id": "SB-06",
-          "floor": 2,
           "type": "Single",
           "priceMonthly": 4500,
           "status": "occupied",
@@ -65,15 +59,13 @@
         },
         {
           "id": "SB-07",
-          "floor": 2,
           "type": "Shared",
           "priceMonthly": 3200,
-          "status": "available",
+          "status": "occupied",
           "image": "images/rooms/SB-07.jpg"
         },
         {
           "id": "SB-08",
-          "floor": 2,
           "type": "Shared",
           "priceMonthly": 3200,
           "status": "occupied",
@@ -84,9 +76,9 @@
     {
       "id": "prop-2",
       "name": "Berg House",
-      "area": "Pretoria North",
-      "address": "Replace with real street address",
-      "description": "Quiet residence with a focus on study-friendly living. Close to public transport routes.",
+      "area": "Akasia",
+      "address": "1211 Berg Avenue, Ninapark, Akasia",
+      "description": "Sister residence to Sunbird House, same neighbourhood, same standard.",
       "amenities": [
         "Fibre wifi",
         "24/7 access control",
@@ -97,15 +89,13 @@
       "rooms": [
         {
           "id": "BG-01",
-          "floor": 1,
-          "type": "Single",
-          "priceMonthly": 4500,
+          "type": "Sharing",
+          "priceMonthly": 3200,
           "status": "occupied",
           "image": "images/rooms/BG-01.jpg"
         },
         {
           "id": "BG-02",
-          "floor": 1,
           "type": "Single",
           "priceMonthly": 4500,
           "status": "occupied",
@@ -113,31 +103,27 @@
         },
         {
           "id": "BG-03",
-          "floor": 1,
-          "type": "Shared",
-          "priceMonthly": 3200,
+          "type": "Single",
+          "priceMonthly": 4500,
           "status": "occupied",
           "image": "images/rooms/BG-03.jpg"
         },
         {
           "id": "BG-04",
-          "floor": 1,
-          "type": "Shared",
-          "priceMonthly": 3200,
+          "type": "Single",
+          "priceMonthly": 4500,
           "status": "occupied",
           "image": "images/rooms/BG-04.jpg"
         },
         {
           "id": "BG-05",
-          "floor": 2,
           "type": "Single",
           "priceMonthly": 4500,
-          "status": "available",
+          "status": "occupied",
           "image": "images/rooms/BG-05.jpg"
         },
         {
           "id": "BG-06",
-          "floor": 2,
           "type": "Single",
           "priceMonthly": 4500,
           "status": "occupied",
@@ -145,18 +131,16 @@
         },
         {
           "id": "BG-07",
-          "floor": 2,
-          "type": "Shared",
-          "priceMonthly": 3200,
+          "type": "Single",
+          "priceMonthly": 4500,
           "status": "occupied",
           "image": "images/rooms/BG-07.jpg"
         },
         {
           "id": "BG-08",
-          "floor": 2,
-          "type": "Shared",
-          "priceMonthly": 3200,
-          "status": "available",
+          "type": "Single",
+          "priceMonthly": 4500,
+          "status": "occupied",
           "image": "images/rooms/BG-08.jpg"
         }
       ]

@@ -1,12 +1,3 @@
 {
-  "complaints": [
-    {
-      "id": "cmp-1784890004191",
-      "tenantId": "ten-1",
-      "tenantName": "Sample Tenant",
-      "message": "The washing machine ruined my clothes",
-      "status": "open",
-      "createdAt": "2026-07-24T10:46:44.192Z"
-    }
-  ]
+  "complaints": []
 }

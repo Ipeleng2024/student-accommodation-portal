@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sunbird & Berg - Student Accommodation</title>
+  <title>Sunbird & Berg - Belgium Campus Accommodation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -20,19 +20,52 @@
   </header>
 
   <section class="welcome-hero">
-    <span class="eyebrow">Student accommodation - Akasia</span>
+    <div class="hero-blob"></div>
+    <span class="eyebrow">Belgium Campus Accommodation </span>
+    <div class="eyebrow-divider"></div>
     <h1>Two residences. One standard.</h1>
     <p>Secure, fibre-connected student housing in Ninapark, Akasia. Pick a residence below to see rooms, or book a physical viewing.</p>
   </section>
 
+  <section class="stats-banner">
+    <div class="stat-block">
+      <span class="stat-value" id="welcome-stat-available">-</span>
+      <span class="stat-label">Rooms open</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-value" id="welcome-stat-total">-</span>
+      <span class="stat-label">Rooms total</span>
+    </div>
+  </section>
+
+  <section class="why-us">
+    <div class="why-us-item reveal">
+      <div class="why-us-icon">&#128274;</div>
+      <h4>24/7 access control</h4>
+      <p>Secure entry at both residences, day and night.</p>
+    </div>
+    <div class="why-us-item reveal">
+      <div class="why-us-icon">&#128246;</div>
+      <h4>Fibre wifi included</h4>
+      <p>No separate wifi bill, no data worries during exams.</p>
+    </div>
+    <div class="why-us-item reveal">
+      <div class="why-us-icon">&#127968;</div>
+      <h4>Built for student life</h4>
+      <p>Shared kitchens, study lounges, and laundry on-site.</p>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
   <section class="property-cards">
-    <a class="property-card" href="/properties.html#prop-1">
+    <a class="property-card reveal" href="/properties.html#prop-1">
       <div class="gallery-carousel welcome-gallery" data-gallery="prop-1">
         <img class="gallery-img" id="gallery-img-prop-1" src="" alt="Sunbird House" />
         <button class="gallery-nav gallery-prev" data-target="prop-1" aria-label="Previous photo" style="display:none;">&#8592;</button>
         <button class="gallery-nav gallery-next" data-target="prop-1" aria-label="Next photo" style="display:none;">&#8594;</button>
       </div>
-          <div class="property-card-body">
+      <div class="property-card-body">
         <h2>Sunbird House</h2>
         <p>92 Sunbird Avenue, Ninapark, Akasia</p>
         <ul class="perks-list perks-list-compact" id="perks-prop-1"></ul>
@@ -40,7 +73,7 @@
       </div>
     </a>
 
-    <a class="property-card" href="/properties.html#prop-2">
+    <a class="property-card reveal" href="/properties.html#prop-2">
       <div class="gallery-carousel welcome-gallery" data-gallery="prop-2">
         <img class="gallery-img" id="gallery-img-prop-2" src="" alt="Berg House" />
         <button class="gallery-nav gallery-prev" data-target="prop-2" aria-label="Previous photo" style="display:none;">&#8592;</button>
@@ -55,7 +88,7 @@
     </a>
   </section>
 
-  <section class="viewing-cta">
+  <section class="viewing-cta reveal">
     <div>
       <h3>Want to see a room in person?</h3>
       <p>Book a physical viewing and we'll be in touch to confirm a time.</p>
@@ -70,6 +103,7 @@
 
   <script src="/js/gallery-helpers.js"></script>
   <script src="/js/welcome.js"></script>
+  <script src="/js/welcome-interactions.js"></script>
   <script src="/js/chatbot-widget.js"></script>
 </body>
 </html>

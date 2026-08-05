@@ -1,0 +1,15 @@
+{
+  "bookings": [
+    {
+      "id": "book-1785926153767",
+      "name": "Ipeleng Rebatle Ntjana",
+      "email": "ipelengntjana23@gmail.com",
+      "phone": "0763026776",
+      "property": "Sunbird House",
+      "preferredDate": "Saturday Morning ",
+      "message": "",
+      "status": "new",
+      "createdAt": "2026-08-05T10:35:53.768Z"
+    }
+  ]
+}

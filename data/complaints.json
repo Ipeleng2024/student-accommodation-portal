@@ -1,3 +1,12 @@
 {
-  "complaints": []
+  "complaints": [
+    {
+      "id": "cmp-1785098708088",
+      "tenantId": "ten-1",
+      "tenantName": "Sample Tenant",
+      "message": "noise",
+      "status": "open",
+      "createdAt": "2026-07-26T20:45:08.091Z"
+    }
+  ]
 }

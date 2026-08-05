@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a viewing - Sunbird & Berg</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><a href="/welcome.html">Sunbird & Berg</a></div>
+    <nav class="site-nav">
+      <a href="/properties.html">Properties</a>
+    </nav>
+  </header>
+
+  <main style="max-width:480px;">
+    <span class="eyebrow">Physical viewing</span>
+    <h2 style="font-family:var(--font-display); font-size:28px; margin-top:8px;">Book a viewing</h2>
+    <p style="color:var(--ink-soft); margin-bottom:24px;">Fill this in and we'll be in touch to confirm a time that works.</p>
+
+    <form id="booking-form" style="display:flex; flex-direction:column; gap:14px;">
+      <label style="font-size:13px; color:var(--ink-soft);">
+        Full name
+        <input type="text" id="name" required
+          style="width:100%; margin-top:6px; padding:10px 12px; border:1px solid var(--line); border-radius:4px; font-family:var(--font-body); font-size:14px; background:var(--paper);" />
+      </label>
+      <label style="font-size:13px; color:var(--ink-soft);">
+        Email
+        <input type="email" id="email" required
+          style="width:100%; margin-top:6px; padding:10px 12px; border:1px solid var(--line); border-radius:4px; font-family:var(--font-body); font-size:14px; background:var(--paper);" />
+      </label>
+      <label style="font-size:13px; color:var(--ink-soft);">
+        Phone
+        <input type="tel" id="phone" required
+          style="width:100%; margin-top:6px; padding:10px 12px; border:1px solid var(--line); border-radius:4px; font-family:var(--font-body); font-size:14px; background:var(--paper);" />
+      </label>
+      <label style="font-size:13px; color:var(--ink-soft);">
+        Which property?
+        <select id="property" required
+          style="width:100%; margin-top:6px; padding:10px 12px; border:1px solid var(--line); border-radius:4px; font-family:var(--font-body); font-size:14px; background:var(--paper);">
+          <option value="Sunbird House">Sunbird House</option>
+          <option value="Berg House">Berg House</option>
+          <option value="Either">Either / not sure yet</option>
+        </select>
+      </label>
+      <label style="font-size:13px; color:var(--ink-soft);">
+        Preferred date/time
+        <input type="text" id="preferredDate" placeholder="e.g. Saturday morning, or a specific date" required
+          style="width:100%; margin-top:6px; padding:10px 12px; border:1px solid var(--line); border-radius:4px; font-family:var(--font-body); font-size:14px; background:var(--paper);" />
+      </label>
+      <label style="font-size:13px; color:var(--ink-soft);">
+        Anything else? (optional)
+        <textarea id="message" rows="3"
+          style="width:100%; margin-top:6px; padding:10px 12px; border:1px solid var(--line); border-radius:4px; font-family:var(--font-body); font-size:14px; background:var(--paper); resize:vertical;"></textarea>
+      </label>
+
+      <button type="submit"
+        style="margin-top:8px; padding:11px; border:none; border-radius:4px; background:var(--ink); color:var(--paper); font-family:var(--font-body); font-size:14px; font-weight:600; cursor:pointer;">
+        Request viewing
+      </button>
+
+      <p id="status-msg" style="font-size:13px; display:none;"></p>
+    </form>
+  </main>
+
+  <script src="/js/book-viewing.js"></script>
+</body>
+</html>

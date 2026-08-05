@@ -530,3 +530,123 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
+/* ===== Welcome / landing page ===== */
+.welcome-hero {
+  padding: 64px 48px 40px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome-hero h1 {
+  font-family: var(--font-display);
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 12px 0 16px;
+}
+
+.welcome-hero p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.property-cards {
+  display: flex;
+  gap: 24px;
+  padding: 0 48px 56px;
+  max-width: 1080px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.property-card {
+  flex: 1;
+  min-width: 280px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+  display: block;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: white;
+}
+.property-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(30, 42, 62, 0.12);
+}
+
+.cover-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  background: var(--paper-dim);
+}
+
+.property-card-body {
+  padding: 24px;
+}
+
+.property-card-body h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+
+.property-card-body p {
+  color: var(--ink-soft);
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--brass);
+  color: white;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.cta-button-lg {
+  padding: 14px 28px;
+  font-size: 15px;
+}
+
+.viewing-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 48px;
+  margin: 0 48px 56px;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--paper-dim);
+  border-radius: 10px;
+}
+
+.viewing-cta h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+
+.viewing-cta p {
+  color: var(--ink-soft);
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .welcome-hero, .property-cards, .viewing-cta { padding-left: 20px; padding-right: 20px; }
+  .welcome-hero h1 { font-size: 30px; }
+  .viewing-cta { flex-direction: column; align-items: flex-start; }
+}

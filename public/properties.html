@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Room availability - Sunbird & Berg</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><a href="/welcome.html">Sunbird & Berg</a></div>
+    <nav class="site-nav">
+      <a href="#properties">Properties</a>
+      <a href="/book-viewing.html">Book a viewing</a>
+      <a href="/tenant-login.html">Tenant login</a>
+      <a href="/manager-login.html">Manager login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">Live room board</span>
+      <h1>See what's open, right now.</h1>
+      <p>No login needed. Every tile below is a real room across our residences. Filled tiles are taken, open tiles are ready to book.</p>
+    </div>
+
+    <div class="board-stats" id="board-stats">
+      <div><strong id="stat-available">-</strong>rooms open</div>
+      <div><strong id="stat-total">-</strong>rooms total</div>
+    </div>
+
+    <div class="room-board" id="room-board"></div>
+
+    <div class="board-legend">
+      <span><span class="swatch available"></span>Available</span>
+      <span><span class="swatch occupied"></span>Occupied</span>
+    </div>
+  </section>
+
+  <main id="properties"></main>
+
+  <footer>
+    <span>&copy; 2027 Sunbird & Berg</span>
+    <span>92sunbirdave@gmail.com &middot; 072 199 4390 / 076 302 6776</span>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/chatbot-widget.js"></script>
+</body>
+</html>

@@ -7,6 +7,14 @@
       "message": "noise",
       "status": "open",
       "createdAt": "2026-07-26T20:45:08.091Z"
+    },
+    {
+      "id": "cmp-1785947681092",
+      "tenantId": null,
+      "tenantName": "Public inquiry (not logged in)",
+      "message": "Theres no hot water",
+      "status": "open",
+      "createdAt": "2026-08-05T16:34:41.093Z"
     }
   ]
 }

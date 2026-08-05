@@ -27,21 +27,29 @@
 
   <section class="property-cards">
     <a class="property-card" href="/properties.html#prop-1">
-      <img class="cover-img" src="/images/cover/sunbird.jpg" alt="Sunbird House"
-        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%23EDF1F5%22/%3E%3Ctext x=%22300%22 y=%22200%22 font-family=%22monospace%22 font-size=%2216%22 fill=%22%236B7280%22 text-anchor=%22middle%22%3ESunbird House%3C/text%3E%3C/svg%3E'" />
-      <div class="property-card-body">
+      <div class="gallery-carousel welcome-gallery" data-gallery="prop-1">
+        <img class="gallery-img" id="gallery-img-prop-1" src="" alt="Sunbird House" />
+        <button class="gallery-nav gallery-prev" data-target="prop-1" aria-label="Previous photo" style="display:none;">&#8592;</button>
+        <button class="gallery-nav gallery-next" data-target="prop-1" aria-label="Next photo" style="display:none;">&#8594;</button>
+      </div>
+          <div class="property-card-body">
         <h2>Sunbird House</h2>
         <p>92 Sunbird Avenue, Ninapark, Akasia</p>
+        <ul class="perks-list perks-list-compact" id="perks-prop-1"></ul>
         <span class="cta-button">View Sunbird</span>
       </div>
     </a>
 
     <a class="property-card" href="/properties.html#prop-2">
-      <img class="cover-img" src="/images/cover/berg.jpg" alt="Berg House"
-        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%23EDF1F5%22/%3E%3Ctext x=%22300%22 y=%22200%22 font-family=%22monospace%22 font-size=%2216%22 fill=%22%236B7280%22 text-anchor=%22middle%22%3EBerg House%3C/text%3E%3C/svg%3E'" />
+      <div class="gallery-carousel welcome-gallery" data-gallery="prop-2">
+        <img class="gallery-img" id="gallery-img-prop-2" src="" alt="Berg House" />
+        <button class="gallery-nav gallery-prev" data-target="prop-2" aria-label="Previous photo" style="display:none;">&#8592;</button>
+        <button class="gallery-nav gallery-next" data-target="prop-2" aria-label="Next photo" style="display:none;">&#8594;</button>
+      </div>
       <div class="property-card-body">
         <h2>Berg House</h2>
         <p>1211 Berg Avenue, Ninapark, Akasia</p>
+        <ul class="perks-list perks-list-compact" id="perks-prop-2"></ul>
         <span class="cta-button">View Berg</span>
       </div>
     </a>
@@ -60,6 +68,8 @@
     <span>92sunbirdave@gmail.com &middot; 072 199 4390 / 076 302 6776</span>
   </footer>
 
+  <script src="/js/gallery-helpers.js"></script>
+  <script src="/js/welcome.js"></script>
   <script src="/js/chatbot-widget.js"></script>
 </body>
 </html>

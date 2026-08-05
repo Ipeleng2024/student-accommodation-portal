@@ -2,17 +2,18 @@
   "properties": [
     {
       "id": "prop-1",
+      "gallerySlug": "sunbird",
       "name": "Sunbird House",
       "area": "Akasia",
       "address": "92 Sunbird Avenue, Ninapark, Akasia, 0156",
       "description": "Premium student accommodation just 600m from Belgium Campus iTversity.",
       "amenities": [
-        "Fibre wifi",
+        "Uncapped wifi",
         "24/7 access control",
         "Shared kitchen",
         "Study lounge",
         "Laundry on-site",
-        "Backup power"
+        "Backup Wifi(UPS)"
       ],
       "rooms": [
         {
@@ -75,16 +76,18 @@
     },
     {
       "id": "prop-2",
+      "gallerySlug": "berg",
       "name": "Berg House",
       "area": "Akasia",
       "address": "1211 Berg Avenue, Ninapark, Akasia",
       "description": "Sister residence to Sunbird House, same neighbourhood, same standard.",
       "amenities": [
-        "Fibre wifi",
+        "Uncapped wifi",
         "24/7 access control",
         "Shared kitchen",
         "Study lounge",
-        "Laundry on-site"
+        "Laundry on-site",
+        "Backup Wifi(UPS)"
       ],
       "rooms": [
         {

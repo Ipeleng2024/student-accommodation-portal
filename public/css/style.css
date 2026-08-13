@@ -983,3 +983,51 @@ body.js-anim .property-cards .reveal:nth-child(2) { transition-delay: 0.1s; }
 @media (max-width: 640px) {
   .stats-banner { padding: 8px 20px 32px; gap: 32px; }
 }
+/* ===== Contact page ===== */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.contact-card:last-of-type { border-bottom: none; }
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(47, 111, 237, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sage);
+  margin-bottom: 2px;
+}
+
+.contact-value {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 15px;
+}
+a.contact-value:hover { color: var(--brass); }
+
+/* ===== Contact Us CTA block (welcome page) ===== */
+.contact-us-block {
+  text-align: center;
+  padding: 8px 48px 48px;
+}
+
+@media (max-width: 640px) {
+  .contact-us-block { padding: 8px 20px 40px; }
+}

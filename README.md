@@ -449,7 +449,7 @@ The objective is to build a practical application where AI doesn't simply genera
 
 # 👩🏽‍💻 Author
 
-**Dini Vumijojo**
+**Dini Vumijojo and Ipeleng Ntjana**
 
 Information Technology Student
 Cybersecurity • Cloud Security • DevSecOps • AI Development

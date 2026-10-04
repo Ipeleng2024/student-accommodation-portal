@@ -72,6 +72,18 @@
           "status": "occupied",
           "image": "images/rooms/SB-08.jpg"
         }
+      ],
+      "roomTypes": [
+        {
+          "id": "single",
+          "name": "Single room",
+          "priceMonthly": 5300
+        },
+        {
+          "id": "ensuite-sharing",
+          "name": "Ensuite sharing room",
+          "priceMonthly": 5000
+        }
       ]
     },
     {
@@ -88,6 +100,23 @@
         "Study lounge",
         "Laundry on-site",
         "Backup Wifi(UPS)"
+      ],
+      "roomTypes": [
+        {
+          "id": "sharing",
+          "name": "Sharing room",
+          "priceMonthly": 5000
+        },
+        {
+          "id": "single",
+          "name": "Single room",
+          "priceMonthly": 5500
+        },
+        {
+          "id": "ensuite-single",
+          "name": "Ensuite single room",
+          "priceMonthly": 6500
+        }
       ],
       "rooms": [
         {

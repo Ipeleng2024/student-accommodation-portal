@@ -1,6 +1,16 @@
 async function loadCards() {
-  const res = await fetch('/api/public/properties');
-  const data = await res.json();
+  let data;
+
+  try {
+    const res = await fetch('/api/public/properties');
+    data = await res.json();
+  } catch (err) {
+    return;
+  }
+
+  const fromEl = document.getElementById('welcome-from-price');
+  const lowest = lowestPrice(data.properties);
+  if (fromEl && lowest !== null) fromEl.textContent = formatMoney(lowest);
 
   for (const property of data.properties) {
     const slug = property.gallerySlug || property.id;

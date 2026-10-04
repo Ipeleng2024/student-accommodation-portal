@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sunbird & Berg - Belgium Campus Accommodation</title>
+  <title>Sunbird & Berg - Student Accommodation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -12,7 +12,7 @@
 <body>
   <header class="site-header">
     <div class="brand">Sunbird & Berg</div>
-        <nav class="site-nav">
+    <nav class="site-nav">
       <a href="/properties.html">Properties</a>
       <a href="/contact.html">Contact</a>
       <a href="/tenant-login.html">Tenant login</a>
@@ -22,21 +22,15 @@
 
   <section class="welcome-hero">
     <div class="hero-blob"></div>
-    <span class="eyebrow">Belgium Campus Accommodation </span>
+    <div class="price-flag">
+      <span>Starting from</span>
+      <strong id="welcome-from-price">R5,000</strong>
+      <span>/ month</span>
+    </div>
+    <span class="eyebrow">Student accommodation - Akasia - 2027 intake</span>
     <div class="eyebrow-divider"></div>
     <h1>Two residences. One standard.</h1>
-    <p>Secure, fibre-connected student housing in Ninapark, Akasia. Pick a residence below to see rooms, or book a physical viewing.</p>
-  </section>
-
-  <section class="stats-banner">
-    <div class="stat-block">
-      <span class="stat-value" id="welcome-stat-available">-</span>
-      <span class="stat-label">Rooms open</span>
-    </div>
-    <div class="stat-block">
-      <span class="stat-value" id="welcome-stat-total">-</span>
-      <span class="stat-label">Rooms total</span>
-    </div>
+    <p>Secure, fibre-connected student housing in Ninapark, Akasia. Choose a residence below to book your room for 2027.</p>
   </section>
 
   <section class="why-us">
@@ -64,7 +58,7 @@
   <hr class="section-divider" />
 
   <section class="property-cards">
-    <a class="property-card reveal" href="/properties.html#prop-1">
+    <a class="property-card reveal" href="/properties.html#book-prop-1">
       <div class="gallery-carousel welcome-gallery" data-gallery="prop-1">
         <img class="gallery-img" id="gallery-img-prop-1" src="" alt="Sunbird House" />
         <button class="gallery-nav gallery-prev" data-target="prop-1" aria-label="Previous photo" style="display:none;">&#8592;</button>
@@ -74,11 +68,11 @@
         <h2>Sunbird House</h2>
         <p>92 Sunbird Avenue, Ninapark, Akasia</p>
         <ul class="perks-list perks-list-compact" id="perks-prop-1"></ul>
-        <span class="cta-button">View Sunbird</span>
+        <span class="cta-button cta-button-block">Book Sunbird for 2027</span>
       </div>
     </a>
 
-    <a class="property-card reveal" href="/properties.html#prop-2">
+    <a class="property-card reveal" href="/properties.html#book-prop-2">
       <div class="gallery-carousel welcome-gallery" data-gallery="prop-2">
         <img class="gallery-img" id="gallery-img-prop-2" src="" alt="Berg House" />
         <button class="gallery-nav gallery-prev" data-target="prop-2" aria-label="Previous photo" style="display:none;">&#8592;</button>
@@ -88,7 +82,7 @@
         <h2>Berg House</h2>
         <p>1211 Berg Avenue, Ninapark, Akasia</p>
         <ul class="perks-list perks-list-compact" id="perks-prop-2"></ul>
-        <span class="cta-button">View Berg</span>
+        <span class="cta-button cta-button-block">Book Berg for 2027</span>
       </div>
     </a>
   </section>
@@ -103,9 +97,10 @@
 
   <footer>
     <span>&copy; 2027 Sunbird & Berg</span>
-    <span>92sunbirdave@gmail.com &middot; 061 530 7428 </span>
+    <span>92sunbirdave@gmail.com &middot; 072 199 4390 / 076 302 6776</span>
   </footer>
 
+  <script src="/js/pricing-helpers.js"></script>
   <script src="/js/gallery-helpers.js"></script>
   <script src="/js/welcome.js"></script>
   <script src="/js/welcome-interactions.js"></script>

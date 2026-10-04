@@ -32,12 +32,14 @@ function matches(message, triggers) {
 function handleRoomsQuery() {
   const properties = loadProperties();
   const lines = properties.map((p) => {
-    const open = p.rooms.filter((r) => r.status === 'available');
-    if (open.length === 0) return p.name + ': fully booked right now.';
-    const roomList = open.map((r) => r.id + ' (' + r.type + ', ' + money(r.priceMonthly) + '/mo)').join(', ');
-    return p.name + ': ' + open.length + ' open - ' + roomList;
+    const types = p.roomTypes || [];
+    if (types.length === 0) {
+      return p.name + ': prices coming soon, please use the Contact page.';
+    }
+    const list = types.map((t) => t.name + ' ' + money(t.priceMonthly) + '/mo').join(', ');
+    return p.name + ': ' + list;
   });
-  return 'Here is what is open right now:' + String.fromCharCode(10) + lines.join(String.fromCharCode(10)) + String.fromCharCode(10) + String.fromCharCode(10) + 'Want to view the full listings? Head to the Properties section on the homepage.';
+  return '2027 room options:\n' + lines.join('\n') + '\n\nTo book, use the "Book for 2027" buttons on the homepage.';
 }
 
 function handlePaymentQuery(session) {

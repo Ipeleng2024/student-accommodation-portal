@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
-
+const { loginLimiter } = require('../middleware/rateLimit');
 const router = express.Router();
 const TENANTS_PATH = path.join(__dirname, '..', 'data', 'tenants.json');
 const PROPERTIES_PATH = path.join(__dirname, '..', 'data', 'properties.json');
@@ -21,7 +21,7 @@ function requireTenant(req, res, next) {
 }
 
 // POST /api/tenant/login
-router.post('/login', (req, res) => {
+router.post('/login', loginLimiter, (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
     return res.status(400).json({ error: 'Email and password are required' });

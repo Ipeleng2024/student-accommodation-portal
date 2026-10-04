@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
+const { loginLimiter } = require('../middleware/rateLimit');
 
 const router = express.Router();
 const MANAGERS_PATH = path.join(__dirname, '..', 'data', 'managers.json');
@@ -33,7 +34,7 @@ function requireManager(req, res, next) {
   return res.status(401).json({ error: 'Not logged in' });
 }
 
-router.post('/login', (req, res) => {
+router.post('/login', loginLimiter, (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
     return res.status(400).json({ error: 'Email and password are required' });

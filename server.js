@@ -1,4 +1,6 @@
-﻿const express = require('express');
+﻿require('dotenv').config();
+
+const express = require('express');
 const path = require('path');
 const session = require('express-session');
 const publicRoutes = require('./routes/public');
@@ -11,12 +13,19 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+app.set('trust proxy', 1);
+
 app.use(
   session({
-    secret: 'change-this-secret-before-deploying-anywhere-public',
+    secret: process.env.SESSION_SECRET || 'dev-only-fallback-do-not-use-in-production',
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 1000 * 60 * 60 * 8 }
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 8,
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax'
+    }
   })
 );
 

@@ -9,7 +9,7 @@
   panel.innerHTML = `
     <div class="chatbot-header">Ask us anything</div>
     <div class="chatbot-messages" id="chatbot-messages">
-      <div class="chat-msg bot">Hi! Ask me about room availability, your payment status, or file a complaint.</div>
+      <div class="chat-msg bot">Hi! Ask me about room types and prices, where we are, or how to book.</div>
     </div>
     <div class="chatbot-input-row">
       <input type="text" id="chatbot-input" placeholder="Type a message..." />

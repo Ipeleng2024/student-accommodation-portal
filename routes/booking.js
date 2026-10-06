@@ -1,13 +1,13 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const nodemailer = require('nodemailer');
 const { bookingLimiter } = require('../middleware/rateLimit');
 
 const router = express.Router();
 const BOOKINGS_PATH = path.join(__dirname, '..', 'data', 'bookings.json');
 const PROPERTIES_PATH = path.join(__dirname, '..', 'data', 'properties.json');
 const OWNER_EMAIL = '92sunbirdave@gmail.com';
+const DEFAULT_FROM = 'Sunbird Berg Website <onboarding@resend.dev>';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function loadBookings() {
@@ -29,17 +29,6 @@ function loadProperties() {
 
 function clean(value, max) {
   return String(value === undefined || value === null ? '' : value).trim().slice(0, max);
-}
-
-function createTransporter() {
-  if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) return null;
-  return nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_APP_PASSWORD
-    }
-  });
 }
 
 function buildEmail(booking) {
@@ -69,23 +58,41 @@ function buildEmail(booking) {
 }
 
 async function sendBookingEmail(booking) {
-  const transporter = createTransporter();
-  if (!transporter) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.warn('Booking email skipped: RESEND_API_KEY is not set');
     return { sent: false, reason: 'Email not configured on the server yet' };
   }
 
   try {
     const { subject, text } = buildEmail(booking);
-    await transporter.sendMail({
-      from: process.env.GMAIL_USER,
-      to: OWNER_EMAIL,
-      replyTo: booking.email,
-      subject,
-      text
+
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: 'Bearer ' + apiKey,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: process.env.EMAIL_FROM || DEFAULT_FROM,
+        to: [OWNER_EMAIL],
+        reply_to: booking.email,
+        subject,
+        text
+      }),
+      signal: AbortSignal.timeout(10000)
     });
+
+    if (!response.ok) {
+      const detail = await response.text();
+      console.error('Booking email failed (' + response.status + '): ' + detail);
+      return { sent: false, reason: 'Email service rejected the message' };
+    }
+
+    console.log('Booking email sent: ' + subject);
     return { sent: true };
   } catch (err) {
-    console.error('Booking email failed:', err.message);
+    console.error('Booking email failed: ' + err.message);
     return { sent: false, reason: err.message };
   }
 }

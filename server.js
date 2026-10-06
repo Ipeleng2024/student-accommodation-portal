@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.set('trust proxy', 1);
+app.set('trust proxy', 1); 
 
 app.use(
   session({
@@ -32,6 +32,9 @@ app.use(
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'welcome.html'));
 });
+// Old Wix addresses, so pages Google already knows keep working
+app.get('/rooms-and-rates', (req, res) => res.redirect(301, '/properties.html'));
+app.get('/contact-us', (req, res) => res.redirect(301, '/contact.html'));
 
 app.use('/api/public', publicRoutes);
 app.use('/api/manager', managerRoutes);

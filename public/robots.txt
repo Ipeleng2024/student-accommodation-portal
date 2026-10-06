@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /api/
+Disallow: /manager-login.html
+Disallow: /manager-dashboard.html
+Disallow: /tenant-login.html
+Disallow: /tenant-dashboard.html
+
+Sitemap: https://www.92sunbird.co.za/sitemap.xml
